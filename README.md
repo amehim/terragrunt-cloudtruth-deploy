@@ -42,6 +42,7 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     **Create a CloudTruth Project**
     ```
     cloudtruth project set Terragrunt
+
     ```
 
     **Setup CloudTruth Parameters required by the [Terraform Modules](https://github.com/cloudtruth-demo/terragrunt-cloudtruth-modules/blob/main/instance/variables.tf)**
@@ -50,6 +51,7 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     cloudtruth --project Terragrunt parameter set TF_VAR_instance_type -v t2.micro
     cloudtruth --project Terragrunt parameter set TF_VAR_availability_zone_names -v \[\"us-west-2a\",\ \"us-west-2b\"\]
     cloudtruth --project Terragrunt parameter set TF_VAR_resource_tags -v \{\"Name\":\"Cloudtruth-Instance\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"default\"\}
+
     ```
 
     **Create CloudTruth Environments**
@@ -57,6 +59,7 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     cloudtruth environment set development
     cloudtruth environment set production
     cloudtruth environment set staging
+
     ```
 
     **Override variable TF_VAR_resource_tags in each environment**
@@ -64,6 +67,7 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-development\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
     cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-production\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
     cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-staging\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
+    
     ```
 
 ## Running
