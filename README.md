@@ -92,10 +92,12 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
 ## Running
 Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using ``CloudTruth Run`` we will pass the configured ``TF_VAR_xxx`` variables  directly to the Terraform modules with Terragrunt.  This allows you to keep your configuration DRY and have a centrally managed source of truth for your configuration management.
 
-Change directory to terragrunt-cloudtruth-deploy/development/
+Change directory to ``terragrunt-cloudtruth-deploy/development/``
+
 ``cd terragrunt-cloudtruth-deploy/development/`` 
 
 From ``terragrunt-cloudtruth-deploy/development/`` execute the following command which passes variables from the CloudTruth project ``Terragrunt`` for the ``development`` environment into terragrunt:
+
 ``cloudtruth --project Terragrunt --env development run -- terragrunt run-all apply``
 
 You have now created an instance in EC2 and an S3 bucket with Terragrunt and CloudTruth!
