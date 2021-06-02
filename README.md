@@ -94,8 +94,6 @@ Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in yo
 
 Change directory to ``terragrunt-cloudtruth-deploy/development/``
 
-``cd terragrunt-cloudtruth-deploy/development/`` 
-
 From ``terragrunt-cloudtruth-deploy/development/`` execute the following command which passes variables from the CloudTruth project ``Terragrunt`` for the ``development`` environment into terragrunt:
 
 ``cloudtruth --project Terragrunt --env development run -- terragrunt run-all apply``
