@@ -3,6 +3,8 @@ Terragrunt [DRY deploy across environments](https://terragrunt.gruntwork.io/docs
 
 This repository contains Terragrunt HCL that will create an AWS Instance and S3 bucket deployed with Terragrunt utilizing CloudTruth to manage Terraform variable keys and values for a prod, stage and qa environment.
 
+Rather than using terragrunt inputs to define environment parameter values we will inject inputs directlu from a CloudTruth project.
+
 ```
 # terragrunt-cloudtruth-deploy
 ├── prod
