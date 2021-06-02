@@ -1,4 +1,4 @@
-# Terragrunt Cloudtruth Deploy
+# Terragrunt CloudTruth Deploy
 Terragrunt [DRY deploy tutorial across multiple environments](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/#promote-immutable-versioned-terraform-modules-across-environments) with [CloudTruth run](https://docs.cloudtruth.com/configuration-management/cli-and-api/cloudtruth-cli#cloudtruth-run)
 
 This repository contains Terragrunt HCL that will create an AWS Instance in us-west-2 and S3 bucket deployed with Terragrunt utilizing CloudTruth to manage Terraform variable keys and values for a devlopment, production, and staging environment.
@@ -51,7 +51,7 @@ The top level ``terragrunt.hcl`` file specifies the aws provider configuration.
     cloudtruth --project Terragrunt parameter set TF_VAR_resource_tags -v \{\"Name\":\"Cloudtruth-Instance\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"default\"\}
     ```
 
-    **Create CloudTruth Environements**
+    **Create CloudTruth Environments**
     ```
     cloudtruth environment set development
     cloudtruth environment set production
@@ -60,12 +60,12 @@ The top level ``terragrunt.hcl`` file specifies the aws provider configuration.
 
     **Override variable TF_VAR_resource_tags in each environment**
     ```
-    cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-prod\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
-    cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-qa\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
-    cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-stage\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
+    cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-development\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
+    cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-production\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
+    cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-staging\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
     ```
 
 ## Running
-Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using CloudTruth Run we will pass the ``TF_VAR_xxx`` variables we configured directly to the Terraform modules with Terragrunt.  This allows you keep your configuration DRY and have a centrally managed source of truth for your conifguration management.
+Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using CloudTruth Run we will pass the ``TF_VAR_xxx`` variables we configured directly to the Terraform modules with Terragrunt.  This allows you keep your configuration DRY and have a centrally managed source of truth for your configuration management.
 
 
