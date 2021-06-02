@@ -70,9 +70,9 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
 
     ```
 
-    **Verify your project parameters**
 
-    You can verify the parameters we will be using for Terragrunt
+    **Verify your project parameters**
+    You can verify the parameters we will be using for Terragrunt.  In this case we will list parameters for the environment ``development``, note that the ``TF_VAR_resource_tags`` has a source of ``development`` and the tags reference the development environment.
     
     ``cloudtruth --project Terragrunt --env development parameters ls -v``
     ```
@@ -86,8 +86,6 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     +--------------------------------+----------------------------------------------------------------------------------------------------+-------------+--------+--------+-------------+
     ```
 
-
-    
 
 
 ## Running
