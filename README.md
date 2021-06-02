@@ -100,7 +100,7 @@ From ``terragrunt-cloudtruth-deploy/development/`` execute the following command
 
 You have now created an instance in EC2 and an S3 bucket with Terragrunt and CloudTruth!
 
-You can view the outputs that display teh parameter values from the CloudTruth Development environment.
+You can view the outputs that display the parameter values from the CloudTruth Development environment.
 ``terragrunt run-all output``
 ```
 AMI = <sensitive>
