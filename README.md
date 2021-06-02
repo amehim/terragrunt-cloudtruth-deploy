@@ -111,6 +111,8 @@ s3_bucket_name = "cloudtruth-grunt-free-panda"
 s3_tag_name = "CloudTruth-development"
 ```
 
+You can change to the production or staging directories and pass the respective CloudTruth environment to deploy various settings across your different infrastructure!
+
 ## Cleanup
 
 Destroy the AWS resources:
