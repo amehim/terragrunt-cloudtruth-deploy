@@ -113,5 +113,6 @@ s3_tag_name = "CloudTruth-development"
 
 ## Cleanup
 
-Destroy the AWS resources
+Destroy the AWS resources:
+
 ``cloudtruth --project Terragrunt --env development run -- terragrunt run-all destroy``
