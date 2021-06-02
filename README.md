@@ -62,13 +62,31 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
 
     ```
 
-    **Override variable TF_VAR_resource_tags in each environment**
+    **Override variable ``TF_VAR_resource_tags`` in each environment**
     ```
     cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-development\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
     cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-production\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
     cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-staging\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
-    
+
     ```
+
+    **Verify your project parameters**
+    You can verify the parameters we will be using for Terragrunt
+    ``cloudtruth --project Terragrunt --env development parameters ls -v``
+    ```
+    +--------------------------------+----------------------------------------------------------------------------------------------------+-------------+--------+--------+-------------+
+    | Name                           | Value                                                                                              | Source      | Type   | Secret | Description |
+    +--------------------------------+----------------------------------------------------------------------------------------------------+-------------+--------+--------+-------------+
+    | TF_VAR_ami                     | *****                                                                                              | default     | static | true   |             |
+    | TF_VAR_availability_zone_names | ["us-west-2a", "us-west-2b"]                                                                       | default     | static | false  |             |
+    | TF_VAR_instance_type           | t2.micro                                                                                           | default     | static | false  |             |
+    | TF_VAR_resource_tags           | {"Name":"CloudTruth-development","project":"CloudTruth Run Terraform","environment":"development"} | development | static | false  |             |
+    +--------------------------------+----------------------------------------------------------------------------------------------------+-------------+--------+--------+-------------+
+    ```
+
+
+    
+
 
 ## Running
 Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using ``CloudTruth Run`` we will pass the configured ``TF_VAR_xxx`` variables  directly to the Terraform modules with Terragrunt.  This allows you keep your configuration DRY and have a centrally managed source of truth for your configuration management.
