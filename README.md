@@ -31,7 +31,7 @@ Terragrunt folder structure
         
 ```
 
-The ``instance`` and ``s3`` sub-folders contain a ``terragrunt.hcl`` file that set the source parameter to point at the specific modules in the [``terragrunt-cloudtruth-modules``](https://github.com/cloudtruth-demo/terragrunt-cloudtruth-modules) repo.  They also ``include`` the top level ``terragrunt.hcl`` file in the  ``development``, ``production``, and ``staging`` folders.  
+The ``instance`` and ``s3`` sub-folders contain a ``terragrunt.hcl`` file that set the ``source`` parameter to point at the specific modules in the [``terragrunt-cloudtruth-modules``](https://github.com/cloudtruth-demo/terragrunt-cloudtruth-modules) repo.  They also ``include`` the top level ``terragrunt.hcl`` file in the  ``development``, ``production``, and ``staging`` folders.  
 
 The top level ``terragrunt.hcl`` file for each environment specifies the aws provider configuration. 
 
