@@ -71,7 +71,9 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     ```
 
     **Verify your project parameters**
+
     You can verify the parameters we will be using for Terragrunt
+    
     ``cloudtruth --project Terragrunt --env development parameters ls -v``
     ```
     +--------------------------------+----------------------------------------------------------------------------------------------------+-------------+--------+--------+-------------+
