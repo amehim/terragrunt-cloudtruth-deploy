@@ -66,6 +66,6 @@ The top level ``terragrunt.hcl`` file specifies the aws provider configuration.
     ```
 
 ## Running
-Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using CloudTruth Run we will pass the ``TF_VAR_xxx`` variables we configured directly to the Terraform modules with Terragrunt.  This allows you keep your configuration DRY and have a centrally managed source of truth for your configuration management.
+Terragrunt will respect any ``TF_VAR_xxx`` variables you’ve manually set in your environment.  Using ``CloudTruth Run`` we will pass the configured ``TF_VAR_xxx`` variables  directly to the Terraform modules with Terragrunt.  This allows you keep your configuration DRY and have a centrally managed source of truth for your configuration management.
 
 
