@@ -36,7 +36,7 @@ The top level ``terragrunt.hcl`` file specifies the aws provider configuration.
 
 ## Setup
 1. Clone this repo ``terragrunt-cloudtruth-deploy``
-2. Configure your CloudTruth Project with the [CloudTruth CLI](https://docs.cloudtruth.com/configuration-management/cli-and-api/cloudtruth-cli#installation)
+2. Create a CloudTruth Project with the [CloudTruth CLI](https://docs.cloudtruth.com/configuration-management/cli-and-api/cloudtruth-cli#installation)
 
     **Create a CloudTruth Project**
     ```
