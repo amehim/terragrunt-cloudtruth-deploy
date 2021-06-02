@@ -1,4 +1,4 @@
-# terrafrunt-cloudtruth-deploy/qa/instance/terragrunt.hcl
+# terrafrunt-cloudtruth-deploy/production/instance/terragrunt.hcl
 terraform {
   source = "git::https://github.com/cloudtruth-demo/terragrunt-cloudtruth-modules.git//instance?ref=v0.0.1"
 }

@@ -1,4 +1,4 @@
-# terrafrunt-cloudtruth-deploy/stage/terragrunt.hcl
+# terrafrunt-cloudtruth-deploy/production/terragrunt.hcl
 generate "provider" {
   path = "provider.tf"
   if_exists = "overwrite_terragrunt"
