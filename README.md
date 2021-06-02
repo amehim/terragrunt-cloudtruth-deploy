@@ -60,9 +60,9 @@ The top level ``terragrunt.hcl`` file specifies the aws provider configuration.
 
     **Override variable TF_VAR_resource_tags in each environment**
     ```
-cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-prod\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
-cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-qa\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
-cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-stage\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
+    cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-prod\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
+    cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-qa\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
+    cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-stage\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
     ```
 
 ## Running
