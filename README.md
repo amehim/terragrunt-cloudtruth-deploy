@@ -65,8 +65,8 @@ The top level ``terragrunt.hcl`` file for each environment specifies the aws pro
     **Override variable ``TF_VAR_resource_tags`` in each environment**
     ```
     cloudtruth --project Terragrunt --env development parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-development\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"development\"\}
-    cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-production\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\\"\}
-    cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-staging\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\\"\}
+    cloudtruth --project Terragrunt --env production parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-production\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"production\"\}
+    cloudtruth --project Terragrunt --env staging parameter set TF_VAR_resource_tags -v \{\"Name\":\"CloudTruth-staging\",\"project\":\"CloudTruth\ Run\ Terraform\",\"environment\":\"staging\"\}
 
     ```
 
