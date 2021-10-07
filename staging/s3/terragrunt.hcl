@@ -1,4 +1,4 @@
-# terrafrunt-cloudtruth-deploy/staging/s3/terragrunt.hcl
+# terragrunt-cloudtruth-deploy/staging/s3/terragrunt.hcl
 terraform {
   source = "git::https://github.com/cloudtruth-demo/terragrunt-cloudtruth-modules.git//s3?ref=v0.0.1"
 }
