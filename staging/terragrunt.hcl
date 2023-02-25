@@ -9,3 +9,12 @@ provider "aws" {
 }
 EOF
 }
+
+inputs = {
+  # tfvars for staging
+  instance_count = 1
+  instance_type  = "t2.micro"
+  ami = "ami-0557a15b87f6559cf"
+  availability_zone_names = ["us-east-1a","us-east-1b","us-east-1c"]
+  resource_tags = "test-vm"
+}
